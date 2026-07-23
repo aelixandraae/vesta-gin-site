@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart — VESTA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-side">
+    <a class="nav-link" href="our-gins.html">Our Gins</a>
+    <a class="nav-link" href="about.html">About</a>
+  </div>
+  <a href="index.html" class="wordmark">VESTA</a>
+  <div class="nav-side right">
+    <a class="nav-link" href="contact.html">Contact</a>
+    <a class="nav-link cart-link" href="cart.html">Cart</a>
+    <button class="hamburger icon-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <button class="close-btn">CLOSE ✕</button>
+  <nav>
+    <a href="our-gins.html">Our Gins</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</div>
+
+<!-- FILLED STATE -->
+<section id="filledCart" style="padding-top:60px;">
+  <div class="container">
+    <h1 class="section-title" style="text-align:center;">Cart</h1>
+    <p style="text-align:center;color:var(--ink-faint);margin-bottom:50px;">2 items</p>
+
+    <div class="cart-layout">
+      <div>
+        <div class="cart-item">
+          <img src="images/bottle-sage.svg" alt="Vesta Sage">
+          <div>
+            <div class="name">Vesta Sage</div>
+            <div class="size">700 ML</div>
+            <div class="stepper-row">
+              <div class="qty-stepper">
+                <button class="qty-minus" type="button">–</button>
+                <input type="text" value="1" inputmode="numeric">
+                <button class="qty-plus" type="button">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="price" data-unit="54">$54.00</div>
+        </div>
+
+        <div class="cart-item">
+          <img src="images/bottle-dusk.svg" alt="Vesta Dusk">
+          <div>
+            <div class="name">Vesta Dusk</div>
+            <div class="size">700 ML</div>
+            <div class="stepper-row">
+              <div class="qty-stepper">
+                <button class="qty-minus" type="button">–</button>
+                <input type="text" value="1" inputmode="numeric">
+                <button class="qty-plus" type="button">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="price" data-unit="60">$60.00</div>
+        </div>
+
+        <div class="order-notes" style="margin-top:40px;">
+          <h2 style="font-size:20px;margin-bottom:14px;">Order Notes</h2>
+          <textarea placeholder="Add special instruction or gift message"></textarea>
+        </div>
+      </div>
+
+      <div class="summary-box">
+        <h2>Order Summary</h2>
+        <div class="summary-row"><span>Subtotal</span><span data-subtotal>$114.00</span></div>
+        <div class="summary-row muted"><span>Shipping</span><span>Calculated at checkout</span></div>
+        <a href="checkout.html" class="btn btn-solid btn-block">Checkout</a>
+        <a href="our-gins.html" class="continue-link">Continue shopping</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPTY STATE (hidden by default) -->
+<section id="emptyCart" class="hidden">
+  <div class="container empty-cart">
+    <h1>Your cart is empty</h1>
+    <p>Looks like you haven't added anything to your cart yet</p>
+    <a href="our-gins.html" class="btn">Explore collection</a>
+  </div>
+</section>
+
+<div class="newsletter">
+  <div class="container">
+    <h2>Join The List</h2>
+    <p>Become part of VESTA to get exclusive content and first look at new expressions.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Your email" required>
+      <button type="submit">Subscribe →</button>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="wordmark">VESTA</div>
+        <p>Premium-grade gin, thoughtfully distilled from Mediterranean botanicals and presented with intention — crafted to bring people together through exceptional taste and quiet luxury.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <span class="label">Information</span>
+          <a href="our-gins.html">Our Gins</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About</a>
+          <a href="about.html#faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>VESTA Gin © 2026</span>
+      <span>Drink responsibly. 18+</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  // demo-only: append ?empty=1 to the URL to preview the empty-cart state
+  if (new URLSearchParams(location.search).get('empty') === '1') {
+    document.getElementById('filledCart').classList.add('hidden');
+    document.getElementById('emptyCart').classList.remove('hidden');
+  }
+</script>
+</body>
+</html>

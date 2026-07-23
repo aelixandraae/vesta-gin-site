@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — VESTA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-side">
+    <a class="nav-link" href="our-gins.html">Our Gins</a>
+    <a class="nav-link" href="about.html">About</a>
+  </div>
+  <a href="index.html" class="wordmark">VESTA</a>
+  <div class="nav-side right">
+    <a class="nav-link" href="contact.html">Contact</a>
+    <a class="nav-link cart-link" href="cart.html">Cart</a>
+    <button class="hamburger icon-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <button class="close-btn">CLOSE ✕</button>
+  <nav>
+    <a href="our-gins.html">Our Gins</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</div>
+
+<div class="checkout-layout">
+  <div class="checkout-form">
+    <h1 style="text-align:center;">Checkout</h1>
+
+    <div class="disclosure">
+      <span>Order summary +</span>
+      <span>$114.00</span>
+    </div>
+
+    <form class="checkout-form-el">
+      <h2>Contact</h2>
+      <input class="field" type="text" placeholder="Email or mobile phone number" required>
+
+      <h2>Delivery</h2>
+      <div class="field-row">
+        <input class="field" type="text" placeholder="First Name" required>
+        <input class="field" type="text" placeholder="Last Name" required>
+      </div>
+      <input class="field" type="text" placeholder="Address" required>
+      <input class="field" type="text" placeholder="Apartment, suite, etc.">
+      <div class="field-row">
+        <input class="field" type="text" placeholder="City" required>
+        <input class="field" type="text" placeholder="State">
+        <input class="field" type="text" placeholder="ZIP code">
+      </div>
+
+      <h2>Payment</h2>
+      <p style="color:var(--ink-faint);font-size:13px;margin-bottom:16px;">All transactions are secure and encrypted.</p>
+      <input class="field" type="text" placeholder="Card number">
+      <div class="field-row">
+        <input class="field" type="text" placeholder="Expiration date (MM/YY)">
+        <input class="field" type="text" placeholder="Security code">
+      </div>
+      <input class="field" type="text" placeholder="Name on card">
+
+      <button type="submit" class="btn btn-solid btn-block" style="margin-top:20px;">Pay now</button>
+      <p style="text-align:center;color:var(--ink-faint);font-size:12px;margin-top:14px;">This is a visual prototype — no real payment is processed.</p>
+    </form>
+  </div>
+
+  <aside class="checkout-summary">
+    <div class="wordmark" style="margin-bottom:30px;">VESTA</div>
+    <div class="summary-line-item">
+      <img src="images/bottle-sage.svg" alt="Vesta Sage">
+      <div>
+        <div class="name">Vesta Sage</div>
+        <div class="size">700 ML</div>
+      </div>
+      <div class="price">$54.00</div>
+    </div>
+    <div class="summary-line-item">
+      <img src="images/bottle-dusk.svg" alt="Vesta Dusk">
+      <div>
+        <div class="name">Vesta Dusk</div>
+        <div class="size">700 ML</div>
+      </div>
+      <div class="price">$60.00</div>
+    </div>
+    <div class="summary-row" style="margin-top:20px;"><span>Subtotal · 2 items</span><span>$114.00</span></div>
+    <div class="summary-row muted"><span>Shipping</span><span>Enter shipping address</span></div>
+    <div class="summary-row" style="font-family:'Playfair Display',serif;font-size:18px;border-top:1px solid var(--line);padding-top:18px;margin-top:8px;"><span>Total</span><span>USD $114.00</span></div>
+  </aside>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

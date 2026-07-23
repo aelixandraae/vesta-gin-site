@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Product — VESTA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-side">
+    <a class="nav-link" href="our-gins.html">Our Gins</a>
+    <a class="nav-link" href="about.html">About</a>
+  </div>
+  <a href="index.html" class="wordmark">VESTA</a>
+  <div class="nav-side right">
+    <a class="nav-link" href="contact.html">Contact</a>
+    <a class="nav-link cart-link" href="cart.html">Cart</a>
+    <button class="hamburger icon-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <button class="close-btn">CLOSE ✕</button>
+  <nav>
+    <a href="our-gins.html">Our Gins</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</div>
+
+<section style="padding-top:60px;">
+  <div class="container">
+    <div class="product-detail">
+      <div class="product-media">
+        <div class="thumb-main"><img id="mainBottle" src="images/bottle-sage.svg" alt=""></div>
+        <div class="extra-media">
+          <div style="min-height:220px;background-image:linear-gradient(120deg,#c9d3b9,#8a9a6c);" id="lifestyle1"></div>
+          <div style="min-height:220px;background-image:linear-gradient(120deg,#e9e4d2,#b9ae8f);" id="lifestyle2"></div>
+        </div>
+      </div>
+      <div class="product-info">
+        <h1 id="pName">Vesta Sage</h1>
+        <p class="desc" id="pDesc">Loading…</p>
+        <button class="read-more-toggle" data-target="#pDesc" style="background:none;border:0;color:var(--ink-faint);letter-spacing:1px;font-size:12px;text-transform:uppercase;padding:6px 0;">Read More</button>
+        <div class="price"><span id="pPrice">$54.00</span> USD</div>
+
+        <div class="size-row">
+          <button class="size-opt" data-mult="0.55">250 ML</button>
+          <button class="size-opt" data-mult="0.8">500 ML</button>
+          <button class="size-opt active" data-mult="1">700 ML</button>
+          <button class="size-opt" data-mult="1.35">1L</button>
+        </div>
+
+        <div class="qty-add">
+          <div class="qty-stepper">
+            <button class="qty-minus" type="button">–</button>
+            <input type="text" value="1" inputmode="numeric">
+            <button class="qty-plus" type="button">+</button>
+          </div>
+          <a href="cart.html" class="btn btn-solid">Add to cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="newsletter">
+  <div class="container">
+    <h2>Join The List</h2>
+    <p>Become part of VESTA to get exclusive content and first look at new expressions.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Your email" required>
+      <button type="submit">Subscribe →</button>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="wordmark">VESTA</div>
+        <p>Premium-grade gin, thoughtfully distilled from Mediterranean botanicals and presented with intention — crafted to bring people together through exceptional taste and quiet luxury.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <span class="label">Information</span>
+          <a href="our-gins.html">Our Gins</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About</a>
+          <a href="about.html#faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>VESTA Gin © 2026</span>
+      <span>Drink responsibly. 18+</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  const PRODUCTS = {
+    'sage': { name:'Vesta Sage', price:54, desc:"Vesta Sage is celebrated for its herbal depth and earthy character. Fresh sage and wild rosemary lead the palate, balanced by a subtle green juniper base and a warm, grounding finish. Distilled with hand-picked hillside botanicals for a smooth, small-batch gin experience.", bottle:'sage', grad1:'linear-gradient(120deg,#c9d3b9,#8a9a6c)', grad2:'linear-gradient(120deg,#e9e4d2,#b9ae8f)'},
+    'mist': { name:'Vesta Mist', price:58, desc:"Vesta Mist opens with cool citrus peel and coriander, settling into a silken, clean juniper heart. A whisper of lavender lingers on the finish — quiet, crisp, and endlessly mixable.", bottle:'mist', grad1:'linear-gradient(120deg,#bcd6e2,#6f97ab)', grad2:'linear-gradient(120deg,#e4eef2,#a9c4d8)'},
+    'dusk': { name:'Vesta Dusk', price:60, desc:"Vesta Dusk is built around wild lavender and violet root, layered over a classic juniper base. Soft, floral, and faintly smoky on the finish — a gin for slow evenings.", bottle:'dusk', grad1:'linear-gradient(120deg,#d3bfe6,#9e79be)', grad2:'linear-gradient(120deg,#eee3f5,#c3a9d9)'},
+    'amber-reserve': { name:'Amber Reserve', price:85, desc:"Amber Reserve rests briefly in French oak, taking on notes of honey, toasted spice and warm citrus. Bold and rounded, it is VESTA's most contemplative expression.", bottle:'amber-reserve', grad1:'linear-gradient(120deg,#eccf94,#c99a45)', grad2:'linear-gradient(120deg,#f5e6c2,#e3b873)'},
+    'hush': { name:'Vesta Hush', price:58, desc:"Vesta Hush is silken and clean — a purist's gin built on classic juniper, citrus peel and a trace of orris root. Quiet, precise, and made to disappear into a perfect martini.", bottle:'hush', grad1:'linear-gradient(120deg,#e8e4d8,#b9b6a9)', grad2:'linear-gradient(120deg,#f2f0e8,#d8d6ce)'},
+    'bloom': { name:'Vesta Bloom', price:52, desc:"Vesta Bloom is rose and berry led, softened by a delicate juniper base and a touch of hibiscus. Bright, fruit-forward and effortlessly elegant, best served long with grapefruit.", bottle:'bloom', grad1:'linear-gradient(120deg,#f0b7c4,#c97c6e)', grad2:'linear-gradient(120deg,#f9dde2,#e3a9b8)'},
+  };
+
+  const params = new URLSearchParams(location.search);
+  const key = params.get('p') && PRODUCTS[params.get('p')] ? params.get('p') : 'sage';
+  const p = PRODUCTS[key];
+
+  document.getElementById('pageTitle').textContent = p.name + ' — VESTA';
+  document.getElementById('pName').textContent = p.name;
+  document.getElementById('pDesc').textContent = p.desc;
+  document.getElementById('mainBottle').src = 'images/bottle-' + p.bottle + '.svg';
+  document.getElementById('mainBottle').alt = p.name;
+  document.getElementById('lifestyle1').style.backgroundImage = p.grad1;
+  document.getElementById('lifestyle2').style.backgroundImage = p.grad2;
+
+  const priceEl = document.getElementById('pPrice');
+  function renderPrice(){
+    const active = document.querySelector('.size-opt.active');
+    const mult = active ? parseFloat(active.dataset.mult) : 1;
+    priceEl.textContent = '$' + (p.price * mult).toFixed(2);
+  }
+  renderPrice();
+  document.querySelectorAll('.size-opt').forEach(opt => opt.addEventListener('click', renderPrice));
+</script>
+</body>
+</html>
